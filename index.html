@@ -1,24 +1,145 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>writewithheart</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>writewithheart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+      font-size: 3.5em;
+      color: gold;
+      font-family: 'Great Vibes', cursive;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      color: #222;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .startseite {
+      text-align: center;
+      font-size: 1.4em;
+    }
+
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .book {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .book img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 1.1em;
+      background: #f0f0f0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
+<body>
 
-<body class="home">
-
-<div class="sakura"></div>
-
-<div class="hero">
-  <img src="bilder/buch.png" class="openbook">
-</div>
+<header>writewithheart</header>
 
 <nav>
-  <a href="about.html">Über mich</a>
-  <a href="books.html">Bücher</a>
-  <a href="contact.html">Kontakt</a>
+  <a href="#start">Start</a>
+  <a href="#buecher">Bücher</a>
+  <a href="#ueber">Über mich</a>
+  <a href="#kontakt">Kontakt</a>
 </nav>
+
+<section id="start" class="startseite">
+  <h2>Willkommen</h2>
+  <p>Willkommen auf meiner Autorinnen-Webseite. Hier findest du meine Bücher und erfährst mehr über mich und meine Arbeit.</p>
+  <p><strong>News: Neues Buch erscheint bald.</strong></p>
+</section>
+
+<section id="buecher" style="display:none">
+  <h2>Meine Bücher</h2>
+  <div class="books">
+
+    <div class="book">
+      <img src="buch1.jpg" alt="Buch 1">
+      <h3>Buchtitel 1</h3>
+      <p>Hier steht die Beschreibung deines ersten Buches.</p>
+    </div>
+
+    <div class="book">
+      <img src="buch2.jpg" alt="Buch 2">
+      <h3>Buchtitel 2</h3>
+      <p>Hier steht die Beschreibung deines zweiten Buches.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="ueber" style="display:none">
+  <h2>Über mich</h2>
+  <p>Hier kannst du etwas über dich als Autorin erzählen – deine Inspiration, dein Werdegang und deine Leidenschaft fürs Schreiben.</p>
+</section>
+
+<section id="kontakt" style="display:none">
+  <h2>Kontakt</h2>
+  <p>Anna Sophia Rosenthaler<br>
+  anna.rosenthaler@outlook.com</p>
+</section>
+
+<footer>
+  © 2026 writewithheart
+</footer>
+
+<script>
+  const links = document.querySelectorAll("nav a");
+  const sections = document.querySelectorAll("section");
+
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = link.getAttribute("href").substring(1);
+
+      sections.forEach(sec => sec.style.display = "none");
+      document.getElementById(target).style.display = "block";
+    });
+  });
+</script>
 
 </body>
 </html>
