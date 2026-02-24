@@ -1,66 +1,58 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #ffffff;
+  text-align: center;
+  background: white;
   color: #333;
 }
 
-header {
-  text-align: center;
-  padding: 60px 20px 30px;
-}
-
-.tagline {
-  color: #888;
-  letter-spacing: 2px;
-}
-
 nav {
-  text-align: center;
-  padding: 15px;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  margin-top: 40px;
 }
 
 nav a {
   margin: 0 20px;
   text-decoration: none;
-  color: #555;
+  color: #666;
   font-weight: 500;
 }
 
-section {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 20px;
+.hero {
+  margin-top: 60px;
+}
+
+.openbook {
+  width: 220px;
 }
 
 .about {
   display: flex;
-  gap: 40px;
   align-items: center;
-}
-
-.about img {
-  width: 220px;
-  border-radius: 10px;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
 }
 
 .book {
   display: flex;
+  justify-content: center;
   gap: 30px;
-  margin-bottom: 40px;
-  align-items: center;
+  margin: 40px;
 }
 
-.book img {
-  width: 150px;
-  border-radius: 8px;
+.sakura::before {
+  content: "";
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  width: 120px;
+  height: 120px;
+  background: url("bilder/sakura.png");
+  background-size: contain;
+  animation: fall 10s linear infinite;
 }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  border-top: 1px solid #eee;
-  color: #777;
+@keyframes fall {
+  0% {transform: translate(0,0) rotate(0);}
+  100% {transform: translate(100vw,100vh) rotate(360deg);}
 }
