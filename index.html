@@ -11,6 +11,10 @@
       font-family: Arial, sans-serif;
       background: #ffffff;
       color: #222;
+    
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -41,6 +45,7 @@
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
+      flex: 1;
     }
 
     .startseite {
@@ -71,8 +76,36 @@
       padding: 30px;
       font-size: 1.1em;
       background: #f0f0f0;
-      margin-top: 40px;
+      margin-top: auto;
     }
+
+    .ueber-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .ueber-box img {
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    .ueber-box p {
+      flex: 1;
+      margin: 0;
+    }
+
+    @media (max-width: 700px) {
+    .ueber-box {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .ueber-box img {
+      width: 60%;
+    }
+  }
   </style>
 </head>
 <body>
@@ -180,7 +213,7 @@
 
 <section id="ueber" style="display:none">
   <h2>Über die Autorin</h2>
-  <img src="bilder/anna.jpg" alt="Coming soon!!" width="30%" style="float: left">
+  <img src="bilder/anna.jpg" alt="Anna Sophia Rosenthaler">
   <p>Anna Sophia Rosenthaler wurde 2003 in Linz geboren. Sie studierte Pädagogik in Salzburg. Anschließend absolvierte sie eine Weiterbildung zur diplomierten Mobbing- und Gewaltpräventionstrainerin sowie zur Life-Coachin. Aktuell ist sie in der sozialpädagogischen Familienbetreuung tätig. All das sind Fakten, die schnell wieder vergessen werden können. Eine Geschichte jedoch nicht. Eine Geschichte bleibt - und deshalb schreibt sie. Mit ihrem Kinderbuch "Die Honigschwestern" landete sie auf der Longlist des Young Storyteller Awards 2024.</p>
 </section>
 
